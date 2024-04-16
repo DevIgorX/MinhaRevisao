@@ -15,14 +15,10 @@ public class Carro {
     public int obterGasolina(){
         return qdtTanque;
     }
-    public void setQdtTanque(int tanque){
-        this.qdtTanque = tanque;
-    }
-
 
     public void andar(int km){
         int calculo = obterGasolina() - (km / this.consumo);
-        setQdtTanque(calculo);
+        adicionarGasolina(calculo);
 
     }
 

@@ -12,6 +12,7 @@ class Livro {
     public String getTitulo() {
         return titulo;
     }
+
 }
 
 // Definição da classe Biblioteca
