@@ -21,16 +21,16 @@ public class Biblioteca {
 
     public Biblioteca() {
         // Adicionando 10 livros à lista
-        livros.add(new Livro("Livro 1"));
-        livros.add(new Livro("Livro 2"));
-        livros.add(new Livro("Livro 3"));
-        livros.add(new Livro("Livro 4"));
-        livros.add(new Livro("Livro 5"));
-        livros.add(new Livro("Livro 6"));
-        livros.add(new Livro("Livro 7"));
-        livros.add(new Livro("Livro 8"));
-        livros.add(new Livro("Livro 9"));
-        livros.add(new Livro("Livro 10"));
+        livros.add(new Livro("Programação Orientada a Objetos"));
+        livros.add(new Livro("Banco de dados com SQL"));
+        livros.add(new Livro("Mysql ou postgresSql"));
+        livros.add(new Livro("Desenvolvimento Web com React"));
+        livros.add(new Livro("Segurança da Informação"));
+        livros.add(new Livro("Tecnologia da informação"));
+        livros.add(new Livro("Sistemas Distribuidos"));
+        livros.add(new Livro("Logica de Programa"));
+        livros.add(new Livro("Linguam javascript"));
+        livros.add(new Livro("C++"));
     }
 
     public void mostrarLivros() {
@@ -51,6 +51,24 @@ public class Biblioteca {
             System.out.println("Você selecionou o livro: " + livroSelecionado.getTitulo());
         } else {
             System.out.println("Opção inválida!");
+
+        }
+    }
+
+    public void adicionarLivro(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Deseja adicionar um novo livro?");
+        String novolivro = scanner.nextLine();
+
+        if(novolivro.toLowerCase().equals("sim")){
+            System.out.println("Digite o nome do livro");
+            String nomeLivro = scanner.nextLine();
+            livros.add(new Livro(nomeLivro));
+            System.out.println("Livro adicionado com Sucesso!");
+
+        }else {
+            System.out.println("Ok, Saindo...");
+            scanner.close();
         }
     }
 
@@ -63,5 +81,6 @@ public class Biblioteca {
         Biblioteca biblioteca = new Biblioteca();
         biblioteca.mostrarLivros();
         biblioteca.emprestarLivro(nomeSolicitante);
+        biblioteca.adicionarLivro();
     }
 }
