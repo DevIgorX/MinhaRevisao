@@ -14,6 +14,7 @@ public class Cadastro {
     }
 
     public void cadastrarProfessor(Professor professor){
+
         professors.add(professor);
     }
 
