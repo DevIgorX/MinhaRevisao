@@ -11,6 +11,7 @@ class Fruta {
     }
 
     public String getFruta(){
+
         return nomeFruta;
     }
 }

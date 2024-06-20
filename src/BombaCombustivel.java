@@ -25,7 +25,7 @@ public class BombaCombustivel {
     public void abastecerPorValor(int valor){
         this.quantidadeCombustivel += valor / this.valorLitro;
 
-        System.out.println("A quantidade de livros que foi colocado no veículo é de: " +getQuantidadeCombustivel());
+        System.out.println("A quantidade de litros que foi colocado no veículo é de: " +getQuantidadeCombustivel());
     }
 
     public void abastecerPorLitro( int litro){

@@ -24,6 +24,10 @@ public class Agenda {
      public ArrayList<TipoAgenda> lista = new ArrayList<>();
 
 
+     Agenda(){
+         lista.add(new TipoAgenda("Prova de Programação Orientada a Objetos","27/06/2024"));
+     }
+
      public void mostrarLista (){
          Scanner scanner = new Scanner(System.in);
 
@@ -47,7 +51,7 @@ public class Agenda {
          }else {
              System.out.println("Eventos na agenda");
              for(TipoAgenda compromisso : lista){
-                 System.out.println(compromisso.getNomeCompromisso() +" --"+ compromisso.getDataCompromisso());
+                 System.out.println(compromisso.getNomeCompromisso() +" -- "+ "Data: "+ compromisso.getDataCompromisso());
              }
          }
      }
@@ -75,9 +79,6 @@ public class Agenda {
         }
         scanner.close();
     }
-
-
-
 
 
 
